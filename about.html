@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros | Smile Clinica Dental | Dra. Jessika Barquero, DDS</title>
+  <meta name="description" content="Conoce a Smile Clinica Dental y al equipo de la Dra. Jessika Barquero, DDS. Cirujana Dentista graduada de la UCR, registrada en el Colegio de Cirujanos Dentistas de Costa Rica. Clinica dental en Pozos de Santa Ana.">
+  <meta name="keywords" content="sobre nosotros smile clinica dental, Dra Jessika Barquero, Dra Veronica Fernandez ortodoncista, clinica dental Santa Ana, dentista UCR Costa Rica">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sobre Nosotros | Smile Clinica Dental">
+  <meta property="og:description" content="Conoce a la Dra. Jessika Barquero, DDS y al equipo de Smile Clinica Dental en Pozos de Santa Ana, Costa Rica. Odontologia general y especialidades con pasion y profesionalismo.">
+  <meta property="og:image" content="https://smile.cr/assets/images/dra-jessika.jpg">
+  <meta property="og:url" content="https://smile.cr/about.html">
+  <meta property="og:site_name" content="Smile Clinica Dental">
+  <meta property="og:locale" content="es_CR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sobre Nosotros | Smile Clinica Dental">
+  <meta name="twitter:description" content="Conoce al equipo de Smile Clinica Dental en Pozos de Santa Ana, Costa Rica.">
+  <meta name="twitter:image" content="https://smile.cr/assets/images/dra-jessika.jpg">
+
+  <link rel="canonical" href="https://smile.cr/about.html">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,500,700&f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="./assets/images/hero-clinic.jpg">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Smile Clinica Dental",
+    "description": "Clinica dental con odontologia general y especialidades. Diseno de sonrisa, carillas dentales, ortodoncia, implantes y blanqueamiento dental.",
+    "url": "https://smile.cr",
+    "telephone": "+50622827093",
+    "image": "https://smile.cr/assets/images/logo-square.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "De El Lagar de Lindora 150 metros este",
+      "addressLocality": "Pozos de Santa Ana",
+      "addressRegion": "San Jose",
+      "addressCountry": "CR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "9.9408",
+      "longitude": "-84.1847"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "medicalSpecialty": ["Dentistry", "Orthodontics", "CosmeticDentistry"],
+    "employee": [
+      {
+        "@type": "Dentist",
+        "name": "Dra. Jessika Barquero",
+        "jobTitle": "Cirujana Dentista, DDS"
+      },
+      {
+        "@type": "Dentist",
+        "name": "Dra. Veronica Fernandez",
+        "jobTitle": "Ortodoncista"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* --- TEAM SECTION --- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-8);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .team-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--color-divider);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-card-photo {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+    .team-card-photo-placeholder {
+      width: 100%;
+      height: 320px;
+      background: linear-gradient(135deg, var(--color-primary-light), rgba(14,138,126,0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .team-card-photo-placeholder svg {
+      width: 80px;
+      height: 80px;
+      color: var(--color-primary);
+      opacity: 0.5;
+    }
+    .team-card-body {
+      padding: var(--space-6);
+    }
+    .team-card-specialty {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-2);
+    }
+    .team-card-name {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: var(--space-3);
+      font-family: var(--font-display);
+    }
+    .team-card-bio {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+    }
+    .team-card-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: var(--color-primary);
+      border-left: 3px solid var(--color-primary);
+      padding-left: var(--space-4);
+      margin: var(--space-4) 0;
+      line-height: 1.6;
+    }
+    .team-card-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+    }
+
+    /* --- PHILOSOPHY / VALUES --- */
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+    .philosophy-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8) var(--space-6);
+      border: 1px solid var(--color-divider);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .philosophy-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .philosophy-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-5);
+    }
+    .philosophy-icon svg {
+      width: 30px;
+      height: 30px;
+      color: var(--color-primary);
+    }
+    .philosophy-card h3 {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-dark);
+      margin-bottom: var(--space-3);
+    }
+    .philosophy-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    /* --- VALUES LIST --- */
+    .values-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+    }
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+    }
+    .value-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .value-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-primary);
+    }
+    .value-item h4 {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: var(--space-1);
+    }
+    .value-item p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .team-grid { grid-template-columns: 1fr; max-width: 440px; }
+      .philosophy-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .team-card-photo, .team-card-photo-placeholder { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <a href="index.html" class="header-logo" aria-label="Smile Clinica Dental - Inicio">
+      <img src="./assets/images/logo-square.jpg" alt="Smile Clinica Dental logo" width="44" height="44">
+      <div>
+        <div class="logo-text">Smile Clinica Dental</div>
+        <div class="logo-sub">Pozos de Santa Ana</div>
+      </div>
+    </a>
+
+    <button class="mobile-menu-btn" aria-label="Abrir menu de navegacion" aria-expanded="false" id="mobileMenuBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="header-nav" id="headerNav" aria-label="Navegacion principal">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="nav-dropdown">
+          <a href="servicios.html" aria-haspopup="true" aria-expanded="false">Servicios <span class="nav-dropdown-arrow"></span></a>
+          <ul class="nav-dropdown-menu" role="list">
+            <li><a href="servicios.html#diseno-sonrisa">Diseno de Sonrisa</a></li>
+            <li><a href="servicios.html#carillas">Carillas Dentales</a></li>
+            <li><a href="servicios.html#ortodoncia">Ortodoncia</a></li>
+            <li><a href="servicios.html#implantes">Implantes Dentales</a></li>
+            <li><a href="servicios.html#blanqueamiento">Blanqueamiento</a></li>
+            <li><a href="servicios.html#general">Odontologia General</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" style="color: var(--color-primary);">Nosotros</a></li>
+        <li><a href="faq.html">Preguntas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="https://wa.me/50688117451?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" class="nav-cta nav-cta-whatsapp" aria-label="Contactar por WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Sobre Nosotros">
+    <span class="section-label" style="color: var(--color-accent);">Smile Clinica Dental</span>
+    <h1>Sobre Nosotros</h1>
+    <p>Dedicados a transformar sonrisas con pasion, profesionalismo y tecnologia de vanguardia en Pozos de Santa Ana, Costa Rica.</p>
+  </section>
+
+  <!-- ABOUT THE CLINIC -->
+  <section class="section section-light" aria-label="Nuestra Clinica">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="./assets/images/dra-jessika.jpg" alt="Dra. Jessika Barquero en Smile Clinica Dental, Pozos de Santa Ana" width="600" height="750" loading="eager" decoding="async" style="object-position: center 20%;">
+        </div>
+        <div class="about-content">
+          <span class="section-label">Nuestra Historia</span>
+          <h2>Una Clinica Nacida del Amor por las Sonrisas</h2>
+          <p>Smile Clinica Dental nacio con un proposito claro: brindar atencion odontologica de la mas alta calidad en un ambiente calido, cercano y de confianza. Ubicada en Pozos de Santa Ana, Lindora, nuestra clinica combina la calidez del trato personal con la precision de la tecnologia moderna.</p>
+          <p>Desde su fundacion, Smile Clinica Dental ha crecido guiada por un mismo principio: cada paciente merece lo mejor. No solo en tecnica y materiales, sino en la experiencia completa de sentirse escuchado, atendido y valorado.</p>
+
+          <div class="values-list">
+            <div class="value-item">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <h4>Nuestra Mision</h4>
+                <p>Mejorar la calidad de vida de nuestros pacientes a traves de tratamientos dentales personalizados, innovadores y accesibles, en un entorno de confianza y bienestar.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              </div>
+              <div>
+                <h4>Nuestra Vision</h4>
+                <p>Ser la clinica dental de referencia en Santa Ana y la Gran Area Metropolitana, reconocida por la excelencia clinica, el trato humano y los resultados que cambian vidas.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <h4>Nuestros Valores</h4>
+                <p>Honestidad, excelencia, empatia y dedicacion. Cada decision que tomamos tiene al paciente en el centro, porque su bienestar es nuestra mayor recompensa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRO EQUIPO -->
+  <section class="section" aria-label="Nuestro Equipo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Profesionales de Confianza</span>
+        <h2 class="section-title">Nuestro Equipo</h2>
+        <p class="section-subtitle">Contamos con especialistas altamente calificados, comprometidos con tu salud bucal y la mejor experiencia dental en cada visita.</p>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- Dra. Jessika Barquero -->
+        <div class="team-card">
+          <img src="./assets/images/dra-jessika.jpg" alt="Dra. Jessika Barquero, DDS - Cirujana Dentista en Smile Clinica Dental" class="team-card-photo" loading="lazy" decoding="async" style="object-position: center 15%;">
+          <div class="team-card-body">
+            <span class="team-card-specialty">Cirujana Dentista &middot; Fundadora</span>
+            <h3 class="team-card-name">Dra. Jessika Barquero, DDS</h3>
+            <p class="team-card-bio">Graduada de la Universidad de Costa Rica (UCR) y registrada en el Colegio de Cirujanos Dentistas de Costa Rica (Codigo 309206). La Dra. Barquero es especialista en odontologia general y estetica dental, con amplia experiencia en diseno de sonrisa, carillas dentales e implantes.</p>
+            <blockquote class="team-card-quote">
+              "Elegi la carrera que en esos momentos me dicto el corazon. Amo lo que hago: dar sonrisas."
+            </blockquote>
+            <div class="team-card-credentials">
+              <span class="credential-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                UCR Graduada
+              </span>
+              <span class="credential-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                DDS Certificada
+              </span>
+              <span class="credential-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Cod. 309206
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dra. Veronica Fernandez -->
+        <div class="team-card">
+          <div class="team-card-photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="team-card-body">
+            <span class="team-card-specialty">Especialista en Ortodoncia</span>
+            <h3 class="team-card-name">Dra. Veronica Fernandez</h3>
+            <p class="team-card-bio">Ortodoncista especializada en el diagnostico, prevencion y tratamiento de maloclusiones. La Dra. Fernandez ofrece soluciones de ortodoncia con brackets tradicionales y opciones modernas, adaptadas a cada paciente con planes de pago accesibles bajo el programa "Ortodoncia Sin Prima".</p>
+            <p class="team-card-bio">Su enfoque personalizado asegura resultados optimos en alineacion dental, mejorando tanto la funcion como la estetica de cada sonrisa.</p>
+            <div class="team-card-credentials">
+              <span class="credential-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Ortodoncista
+              </span>
+              <span class="credential-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Ortodoncia Sin Prima
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA FILOSOFIA -->
+  <section class="section section-light" aria-label="Nuestra Filosofia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Lo Que Nos Define</span>
+        <h2 class="section-title">Nuestra Filosofia</h2>
+        <p class="section-subtitle">Cada detalle de nuestra clinica esta pensado para que te sientas en las mejores manos, desde el primer contacto hasta el resultado final.</p>
+      </div>
+
+      <div class="philosophy-grid">
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Atencion Personalizada</h3>
+          <p>Cada paciente es unico. Nos tomamos el tiempo para conocerte, escuchar tus necesidades y disenar un plan de tratamiento que se adapte a tu vida, tu presupuesto y tus objetivos. No existen formulas genericas: tu sonrisa merece un plan hecho a tu medida.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Tecnologia Moderna</h3>
+          <p>Trabajamos con equipos e insumos de ultima generacion para ofrecer tratamientos mas precisos, rapidos y comodos. La tecnologia al servicio de tu sonrisa nos permite obtener resultados superiores con el menor impacto posible para el paciente.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4.97 0-9-2.69-9-6v-2c0-.83.34-1.61.94-2.19C4.54 11.22 5 10.38 5 9.5 5 7.01 7.01 5 9.5 5h5C16.99 5 19 7.01 19 9.5c0 .88.46 1.72 1.06 2.31.6.58.94 1.36.94 2.19v2c0 3.31-4.03 6-9 6z"/><path d="M9 17c.85.63 1.885 1 3 1s2.15-.37 3-1"/></svg>
+          </div>
+          <h3>Comodidad del Paciente</h3>
+          <p>Entendemos que visitar al dentista puede generar aprehension. Por eso creamos un ambiente calido, tranquilo y sin juicios. Nuestro objetivo es que cada visita sea una experiencia positiva, donde te sientas seguro, relajado y en confianza desde el primer momento.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section-dark" aria-label="Por que elegirnos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Razones Para Elegirnos</span>
+        <h2 class="section-title">Tu Sonrisa en las Mejores Manos</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Atencion 24/7</h3>
+          <p>Emergencias dentales atendidas las 24 horas. Estamos disponibles cuando mas nos necesitas.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Trato Personalizado</h3>
+          <p>Cada paciente recibe una atencion unica y dedicada para sentirse comodo y confiado en todo momento.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Tecnologia Moderna</h3>
+          <p>Equipos de ultima generacion para tratamientos mas precisos, rapidos y comodos.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <h3>Planes de Pago</h3>
+          <p>Ortodoncia sin prima y facilidades de pago para que tu tratamiento sea siempre accesible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" aria-label="Agendar cita">
+    <div class="container">
+      <h2>Conocenos en Persona</h2>
+      <p>Agenda tu consulta por WhatsApp y da el primer paso hacia la sonrisa que siempre quisiste. Sera un gusto atenderte.</p>
+      <a href="https://wa.me/50688117451?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" class="btn btn-whatsapp" style="font-size: 1.1rem; padding: var(--space-4) var(--space-10);">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribenos al WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-brand-logo">
+            <img src="./assets/images/logo-square.jpg" alt="Smile Clinica Dental" width="40" height="40">
+            <span>Smile Clinica Dental</span>
+          </a>
+          <p>Odontologia general y especialidades en Pozos de Santa Ana, Costa Rica. Tu sonrisa, nuestra pasion.</p>
+          <p>Dra. Jessika Barquero, DDS</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/costaricaclinica/" target="_blank" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/drajessikabarquero/" target="_blank" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://wa.me/50688117451" target="_blank" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <a href="servicios.html#diseno-sonrisa">Diseno de Sonrisa</a>
+          <a href="servicios.html#carillas">Carillas Dentales</a>
+          <a href="servicios.html#ortodoncia">Ortodoncia</a>
+          <a href="servicios.html#implantes">Implantes Dentales</a>
+          <a href="servicios.html#blanqueamiento">Blanqueamiento</a>
+          <a href="servicios.html#general">Odontologia General</a>
+        </div>
+        <div class="footer-col">
+          <h4>Navegacion</h4>
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="about.html">Nosotros</a>
+          <a href="faq.html">Preguntas Frecuentes</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>Pozos de Santa Ana, Lindora<br>De El Lagar de Lindora 150m este<br>San Jose, Costa Rica</p>
+          <p><a href="https://wa.me/50688117451" target="_blank" style="color: #25D366;">WhatsApp: +506 8811-7451</a></p>
+          <p>Lunes a Sabado<br>Horarios flexibles</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Smile Clinica Dental. Todos los derechos reservados. Dra. Jessika Barquero, DDS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/50688117451?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- FLOATING INSTAGRAM BUTTON -->
+  <a href="https://www.instagram.com/drajessikabarquero/" target="_blank" class="ig-float" aria-label="Seguir en Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('siteHeader');
+      if (window.scrollY > 50) { header.classList.add('scrolled'); }
+      else { header.classList.remove('scrolled'); }
+    });
+
+    // Mobile nav toggle
+    var mobileBtn = document.getElementById('mobileMenuBtn');
+    var headerNav = document.getElementById('headerNav');
+    if (mobileBtn && headerNav) {
+      mobileBtn.addEventListener('click', function() {
+        headerNav.classList.toggle('open');
+        mobileBtn.classList.toggle('active');
+        mobileBtn.setAttribute('aria-expanded', headerNav.classList.contains('open'));
+      });
+      headerNav.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var dd = this.closest('.nav-dropdown');
+          if (dd && this === dd.querySelector(':scope > a') && window.innerWidth <= 1100) {
+            e.preventDefault();
+            dd.classList.toggle('open');
+            return;
+          }
+          headerNav.classList.remove('open');
+          mobileBtn.classList.remove('active');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Desktop dropdown click
+    document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+      var ddLink = dd.querySelector(':scope > a');
+      if (ddLink) {
+        ddLink.addEventListener('click', function(e) {
+          if (window.innerWidth > 1100) {
+            e.preventDefault();
+            dd.classList.toggle('open');
+            document.querySelectorAll('.nav-dropdown').forEach(function(other) {
+              if (other !== dd) other.classList.remove('open');
+            });
+          }
+        });
+      }
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        document.querySelectorAll('.nav-dropdown').forEach(function(dd) { dd.classList.remove('open'); });
+      }
+    });
+  </script>
+
+</body>
+</html>
